@@ -1,18 +1,62 @@
 .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
 }
-.inner-page{
-    position: fixed;
+div{
+    display: block;
+}
+
+.titulo{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    text-align: center;
+}
+main section p{
+    font-size: 20px;
+    text-align: left;
+    text-indent: 20px;
+}
+
+main section h3{
+    font-size: 23px;
+    text-align: center;
+    font-family: "Arial", Helvetica, Sans-serif;
+    font-style: italic;
+    
+}
+ul li{
+    display: inline;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 100px;
+    padding-right: 90px;
+}
+
+main, section{
+    display: block;
+}
+
+main.inner-page{
+    /*position: fixed;*/
+    position: relative;
     z-index: 9999;
     top: 0;
     right: 0;
     left: 0;
     width: 100%!important;
 }
+
+main{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 20px;
+}
+
 main section.content{
     min-height: 800px;
     max-width: 100%;
@@ -20,3 +64,72 @@ main section.content{
     margin-bottom: 50px;
     padding: 0 15px;
 }
+.mt-4, .my-4 {
+    margin-top: 1.5rem!important;
+}
+.monty-card{
+    position: relative;
+    left: 50px;
+    width: 70%;
+    height: 70%;
+    perspective: 800;
+    cursor: pointer;
+}
+.monty__car, .monty__door{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0!important;
+}
+.monty__goat{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0!important;
+}
+.monty__hand{
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.row{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+img{
+    vertical-align: middle;
+    border-style: none;
+}
+.card img, .row img{
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+}
+
+@media (max-width: 930px){
+    .container {
+      min-width: 100%!important;
+      max-width: 100%!important;
+    }
+}
+@media (max-width: 960px){
+    main section.content {
+      margin-left: 0;
+    }
+}
+
+@media (max-width: 1058px){
+    main section.content {
+        flex: 1 0 auto;
+        width: 500px;
+        min-height: 0;
+        padding: 0;
+    }
+}
+
